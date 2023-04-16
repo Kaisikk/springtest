@@ -4,13 +4,17 @@ import com.springtest.system.configuration.SpringConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Тестирование создания бинов в контексте
+ * Класс для тестирования работы контекста
  */
 public class TestBeans {
 
     public static void main(String[] args) {
+        // инициализация контекста
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        String testContext = (String) context.getBean("getString");
-        System.out.println(testContext);
+        // получение бина из контекста (в этом случае - переменной)
+        String testString = (String) context.getBean("getString");
+        String testLazy = (String) context.getBean("getLazy", "testLazy");
+        System.out.println(testString);
+        System.out.println(testLazy);
     }
 }
