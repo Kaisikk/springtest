@@ -1,5 +1,6 @@
 package com.springtest.system.configuration;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -11,7 +12,10 @@ import org.springframework.context.annotation.Lazy;
 @Configuration
 public class SpringConfig {
 
-    // создание переменной в бинах
+    /**
+     * Создание бина в классе
+     * @return String
+     */
     @Bean(name= "getString")
     public String getString(){
         return "Hello World";
@@ -28,4 +32,5 @@ public class SpringConfig {
     public String getLazy(String lazy){
         return lazy;
     }
+
 }
