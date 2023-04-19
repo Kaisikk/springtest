@@ -1,6 +1,6 @@
-package com.springtest.testconfig;
+package com.springtest.usecases.testconfig;
 
-import com.springtest.system.configuration.SpringConfig;
+import com.springtest.usecases.system.configuration.SpringConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

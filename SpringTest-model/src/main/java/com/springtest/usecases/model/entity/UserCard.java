@@ -1,4 +1,4 @@
-package com.springtest.model.entity;
+package com.springtest.usecases.model.entity;
 
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,6 @@
-package com.springtest.system.configuration;
+package com.springtest.usecases.system.configuration;
 
 import org.springframework.stereotype.Component;
-import com.springtest.model.entity.User;
 
 /**
  * Класс для тестирования работы контекста прописанно в xml
@@ -23,7 +22,7 @@ public class TestXmlConfig {
         this.testStringFromXmlContext = testStringFromXmlContext;
     }
 
-    User User;
+    com.springtest.usecases.model.entity.User User;
 
 
 }

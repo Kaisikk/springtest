@@ -9,7 +9,8 @@
 		<module>SpringTest-web</module>
 		<module>SpringTest-model</module>
 		<module>SpringTest-systemutils</module>
-	</modules>
+        <module>SpringTest-robots</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

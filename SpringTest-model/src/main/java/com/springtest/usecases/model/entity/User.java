@@ -1,8 +1,6 @@
-package com.springtest.model.entity;
+package com.springtest.usecases.model.entity;
 
-import com.springtest.model.core.Role;
-import com.springtest.model.entity.UserCard;
-import com.springtest.model.entity.UserContacts;
+import com.springtest.usecases.model.core.Role;
 import org.springframework.stereotype.Component;
 
 /**

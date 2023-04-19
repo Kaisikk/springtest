@@ -1,4 +1,4 @@
-package com.springtest.system.configuration;
+package com.springtest.usecases.system.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.springtest.springtest;
+package com.springtest.usecases.springtest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

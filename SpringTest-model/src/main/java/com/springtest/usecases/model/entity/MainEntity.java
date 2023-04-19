@@ -1,6 +1,5 @@
-package com.springtest.model.entity;
+package com.springtest.usecases.model.entity;
 
-import com.springtest.model.entity.User;
 import org.springframework.stereotype.Component;
 
 /**
