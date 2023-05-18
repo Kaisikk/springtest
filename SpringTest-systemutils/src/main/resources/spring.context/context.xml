@@ -14,12 +14,16 @@
     <context:component-scan base-package="com.springtest.system"></context:component-scan>
     <context:component-scan base-package="com.springtest.usecases"></context:component-scan>
 
+    <context:annotation-config/>
+    <!--    создание бина мой аннотации-->
+    <bean class="com.springtest.system.annotationimpl.RobotAnnotationBeanPostProcessor"/>
+    <bean class="com.springtest.system.annotationimpl.InjectIntAnnotationBeanPostProcessor"/>
+    <!-- namespace для подключения всех beanPostProcessor-ов -->
+
     <bean id = "sayRobot" class="com.springtest.usecases.usecaseimpl.TestRobotUseCaseImpl">
-        <property name="count" value="10"></property>
         <property name="message" value="Hi, Robot"></property>
     </bean>
-<!--    создание бина мой аннотации-->
-    <bean class="com.springtest.system.annotationimpl.InjectIntAnnotationBeanPostProcessor"/>
+
     <bean id="testXmlConfig"
           class="com.springtest.usecases.system.configuration.TestXmlConfig">
         <property name="testStringFromXmlContext">

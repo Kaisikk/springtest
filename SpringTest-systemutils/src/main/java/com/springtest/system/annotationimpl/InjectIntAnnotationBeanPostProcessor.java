@@ -18,8 +18,7 @@ public class InjectIntAnnotationBeanPostProcessor implements BeanPostProcessor {
      * Вызывается перед созданием бина
      * @param bean
      * @param beanName
-     * @return
-     * @throws BeansException
+     * @return Object
      */
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) {

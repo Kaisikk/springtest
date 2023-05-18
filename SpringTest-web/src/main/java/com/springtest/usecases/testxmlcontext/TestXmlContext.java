@@ -3,7 +3,9 @@ package com.springtest.usecases.testxmlcontext;
 import com.springtest.usecases.model.core.Role;
 import com.springtest.usecases.system.configuration.TestXmlConfig;
 import com.springtest.usecases.model.entity.User;
+import com.springtest.usecases.usecase.TestRobotUseCase;
 import com.springtest.usecases.usecaseimpl.TestRobotUseCaseImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -28,7 +30,8 @@ public class TestXmlContext {
         System.out.println(testXmlConfigOnString);
         System.out.println(user.getRole());
 
-        // получение бина и выполнение его метода
-        xmlContext.getBean(TestRobotUseCaseImpl.class).sayRobot();
+            // получение бина и выполнение его метода
+        xmlContext.getBean(TestRobotUseCase.class).sayRobot();
+
     }
 }
