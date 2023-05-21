@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Lazy;
 @Configuration
 public class SpringConfig {
 
-    /**
-     * Создание бина в классе
-     * @return String
-     */
-    @Bean(name= "getString")
-    public String getString(){
-        return "Hello World";
-    }
+//    /**
+//     * Создание бина в классе
+//     * @return String
+//     */
+//    @Bean(name= "getString")
+//    public String getString(){
+//        return "Hello World";
+//    }
 
     /**
      * Создание переменной с аннотацией Lazy
@@ -27,10 +27,10 @@ public class SpringConfig {
      * @param lazy
      * @return
      */
-    @Bean
-    @Lazy(value = true)
-    public String getLazy(String lazy){
-        return lazy;
-    }
+//    @Bean
+//    @Lazy(value = true)
+//    public String getLazy(String lazy){
+//        return lazy;
+//    }
 
 }

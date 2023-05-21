@@ -1,6 +1,7 @@
 package com.springtest.usecases.usecaseimpl;
 
 import com.springtest.system.annotation.InjectInt;
+import com.springtest.system.annotation.PostProxy;
 import com.springtest.system.annotation.Robot;
 import com.springtest.usecases.usecase.TestRobotUseCase;
 
@@ -41,8 +42,11 @@ public class TestRobotUseCaseImpl implements TestRobotUseCase {
         System.out.println("Phase 1");
     }
 
+    @PostProxy
     @Override
     public void sayRobot() {
+
+        System.out.println("Phase 3");
 
         if (count == null)
         count = 5;
@@ -56,5 +60,14 @@ public class TestRobotUseCaseImpl implements TestRobotUseCase {
             System.out.println(message);
         }
 
+    }
+
+    /**
+     * Тестирование возможности запуска методы после полной настройки бина
+     */
+    @PostProxy
+    @Override
+    public void testPostProxy(){
+        System.out.println("Моя аннотация успешно отработала после полной настройки бина");
     }
 }
