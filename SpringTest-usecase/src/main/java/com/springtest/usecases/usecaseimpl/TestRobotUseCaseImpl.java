@@ -1,5 +1,6 @@
 package com.springtest.usecases.usecaseimpl;
 
+import com.springtest.system.annotation.DeprecatedClass;
 import com.springtest.system.annotation.InjectInt;
 import com.springtest.system.annotation.PostProxy;
 import com.springtest.system.annotation.Robot;
@@ -11,6 +12,8 @@ import javax.annotation.PostConstruct;
  * Сам бин я создаю и назначаю его поля в context.xml
  */
 @Robot
+// кастомная deprecated аннотация
+@DeprecatedClass(newImpl = TestRobotUseCaseImpl2.class)
 public class TestRobotUseCaseImpl implements TestRobotUseCase {
 
     // количество повторений сообщения
@@ -68,6 +71,6 @@ public class TestRobotUseCaseImpl implements TestRobotUseCase {
     @PostProxy
     @Override
     public void testPostProxy(){
-        System.out.println("Моя аннотация успешно отработала после полной настройки бина");
+        System.out.println("Аннотация PostProxy успешно отработала после полной настройки бина");
     }
 }

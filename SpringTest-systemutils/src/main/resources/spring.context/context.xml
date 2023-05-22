@@ -18,6 +18,7 @@
     <context:annotation-config/>
 
     <!--    создание бина мой аннотации-->
+    <bean class="com.springtest.system.annotationimpl.DeprecationHandlerBeanFactoryPostProcessor"/>
     <bean class="com.springtest.system.annotationimpl.PostProxyInvoker"/>
     <bean class="com.springtest.system.annotationimpl.RobotAnnotationBeanPostProcessor"/>
     <bean class="com.springtest.system.annotationimpl.InjectIntAnnotationBeanPostProcessor"/>
