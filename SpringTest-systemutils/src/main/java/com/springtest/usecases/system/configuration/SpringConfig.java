@@ -1,36 +1,31 @@
 package com.springtest.usecases.system.configuration;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.*;
+
+import java.awt.*;
+import java.time.Instant;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Конфигурационный класс
  * Тут создаются определяются бины и их property
  */
 @Configuration
+@ComponentScan(basePackages = "com.springtest.usecases.classconfig.usecaseimpl")
 public class SpringConfig {
 
-//    /**
-//     * Создание бина в классе
-//     * @return String
-//     */
-//    @Bean(name= "getString")
-//    public String getString(){
-//        return "Hello World";
-//    }
-
     /**
-     * Создание переменной с аннотацией Lazy
-     * С этой аннотацией бин не будет создаваться во время загрузки контекста
-     * @param lazy
-     * @return
+     * Создание бина со scope prototype чтобы каждый раз создавался новый бин, когда я к нему обращаюсь
+     * Чтобы каждрый раз при обращении к бину он рефрешился, можно сконфигурировать bean так @Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
+     * @return Color
      */
-//    @Bean
-//    @Lazy(value = true)
-//    public String getLazy(String lazy){
-//        return lazy;
-//    }
+    @Bean
+    @Scope(value = "prototype")
+    public Color color(){
+        Random random = new Random();
+        return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
+    }
+
 
 }
